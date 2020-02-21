@@ -1,4 +1,4 @@
-# lets-encrypt-container - automatic certifi validaition via the acme.sh script
+# lets-encrypt-container - automatic certificate validation via acme.sh
 
 - An ACME protocol client written purely in Shell (Unix shell) language.
 - Full ACME protocol implementation.
