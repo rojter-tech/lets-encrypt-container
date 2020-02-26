@@ -1,6 +1,6 @@
 #!/bin/bash
-THISPW=$(cat /home/rancher/.pw)
-HTML_DIR=/var/lib/docker/volumes/web_www-data/_data
+THISPW=$(cat $HOME/.pw)
+HTML_DIR=/var/dockerdata/www_data
 LOCALVOL=/var/lib/docker/volumes/certs/_data
 TARGETVOL=/var/dockerdata/certs
 
@@ -11,7 +11,7 @@ TARGET=$TARGETVOL/$DOMAIN
 docker run -it --rm \
     -v certs:/acme.sh \
     -v $HTML_DIR:/www-data \
-    acme --issue \
+    rojtertech/acme --issue \
 	-d $DOMAIN \
 	-d code.$DOMAIN \
 	-d dns.$DOMAIN \
